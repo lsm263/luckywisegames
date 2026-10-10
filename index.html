@@ -736,8 +736,13 @@
 
 		<div class="card" data-type="pc">
           <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('o0EHBnVsEPQ')" class="video-box">
-            <img src="https://img.youtube.com/vi/o0EHBnVsEPQ/maxresdefault.jpg" alt="Steelblood: Allied Front" class="thumbnail">
-            <div class="play-button"></div>
+<img
+  src="https://img.youtube.com/vi/o0EHBnVsEPQ/maxresdefault.jpg"
+  onerror="this.onerror=null;this.src='https://img.youtube.com/vi/o0EHBnVsEPQ/hqdefault.jpg';"
+  alt="Steelblood: Allied Front"
+  class="thumbnail"
+>   
+			  <div class="play-button"></div>
           </div>
           <div class="info">
             <h3>Steelblood: Allied Front</h3>

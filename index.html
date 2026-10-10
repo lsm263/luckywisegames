@@ -319,17 +319,18 @@
     margin-bottom: 30px;
   }
 
+  .portfolio-desc:empty, .home-container p:empty { display: none; }
+
   .portfolio-desc {
     font-size: 1.1rem;
     color: #ccc;
     line-height: 1.6;
     margin-top: 15px;
     margin-bottom: 5px;
-    min-height: 40px;
     animation: fadeIn 0.4s ease forwards;
   }
 
-  .portfolio-controls { display: flex; gap: 15px; margin-bottom: 25px; }
+  .portfolio-controls { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px; }
   .filter-btn {
     background: var(--glass); border: 1px solid var(--glass-border); color: white;
     padding: 10px 25px; border-radius: 25px; cursor: pointer; transition: 0.3s;
@@ -412,6 +413,8 @@
   .info { padding: 20px; }
   .info h3 { margin: 0 0 10px 0; font-size: 1.25rem; color: #fff; }
   .info p { margin: 0; font-size: 0.9rem; color: #ccc; }
+
+  body.modal-open { overflow: hidden; }
 
   /* --- Video Modal Popup --- */
   .video-modal {
@@ -668,10 +671,10 @@
       </div>
 
       <div class="social-footer">
-        <a href="https://www.linkedin.com/in/ulgenbilgin/" target="_blank" class="social-link"><img src="linkedin.png" alt="Linkedin"></a>
-        <a href="https://x.com/CalestialKhan/" target="_blank" class="social-link"><img src="twitter.png" alt="X"></a>
-        <a href="https://www.youtube.com/@CalestialKhan" target="_blank" class="social-link"><img src="youtube.png" alt="Youtube"></a>
-        <a href="https://store.steampowered.com/curator/46128060-Calestial-Games/" target="_blank" class="social-link"><img src="steam.png" alt="Steam"></a>
+        <a href="https://www.linkedin.com/in/ulgenbilgin/" target="_blank" rel="noopener noreferrer" class="social-link"><img src="linkedin.png" alt="Linkedin"></a>
+        <a href="https://x.com/CalestialKhan/" target="_blank" rel="noopener noreferrer" class="social-link"><img src="twitter.png" alt="X"></a>
+        <a href="https://www.youtube.com/@CalestialKhan" target="_blank" rel="noopener noreferrer" class="social-link"><img src="youtube.png" alt="Youtube"></a>
+        <a href="https://store.steampowered.com/curator/46128060-Calestial-Games/" target="_blank" rel="noopener noreferrer" class="social-link"><img src="steam.png" alt="Steam"></a>
       </div>
     </div>
   </nav>
@@ -688,25 +691,25 @@
         </div>
 
         <div class="home-social-grid">
-          <a href="https://www.linkedin.com/in/ulgenbilgin/" target="_blank" class="home-social-item">
+          <a href="https://www.linkedin.com/in/ulgenbilgin/" target="_blank" rel="noopener noreferrer" class="home-social-item">
             <div class="icon-wrapper">
               <img src="linkedin.png" alt="LinkedIn">
             </div>
             <span>LinkedIn</span>
           </a>
-          <a href="https://x.com/CalestialKhan/" target="_blank" class="home-social-item">
+          <a href="https://x.com/CalestialKhan/" target="_blank" rel="noopener noreferrer" class="home-social-item">
             <div class="icon-wrapper">
               <img src="twitter.png" alt="X">
             </div>
             <span>Twitter</span>
           </a>
-          <a href="https://www.youtube.com/@CalestialKhan" target="_blank" class="home-social-item">
+          <a href="https://www.youtube.com/@CalestialKhan" target="_blank" rel="noopener noreferrer" class="home-social-item">
             <div class="icon-wrapper">
               <img src="youtube.png" alt="YouTube">
             </div>
             <span>YouTube</span>
           </a>
-          <a href="https://store.steampowered.com/curator/46128060-Calestial-Games/" target="_blank" class="home-social-item">
+          <a href="https://store.steampowered.com/curator/46128060-Calestial-Games/" target="_blank" rel="noopener noreferrer" class="home-social-item">
             <div class="icon-wrapper">
               <img src="steam.png" alt="Steam">
             </div>
@@ -732,18 +735,18 @@
       <div class="grid" id="projectGrid">
 
 		<div class="card" data-type="pc">
-          <div onclick="openVideo('o0EHBnVsEPQ')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('o0EHBnVsEPQ')" class="video-box">
             <img src="https://img.youtube.com/vi/o0EHBnVsEPQ/maxresdefault.jpg" alt="Steelblood: Allied Front" class="thumbnail">
             <div class="play-button"></div>
           </div>
           <div class="info">
-            <h3>Steelblood: Allied Front is an old-school first-person shooter set during World War II, inspired by classics such as Medal of Honor and Half-Life.</h3>
+            <h3>Steelblood: Allied Front</h3>
             <p data-key="desc_steelblood"></p>
           </div>
         </div>
 		  
         <div class="card" data-type="pc">
-          <div onclick="openVideo('Z4G48QD6Tfo')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('Z4G48QD6Tfo')" class="video-box">
             <img src="https://img.youtube.com/vi/Z4G48QD6Tfo/maxresdefault.jpg" alt="City Builder & Clicker" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -754,7 +757,7 @@
         </div>
 
         <div class="card" data-type="pc">
-          <div onclick="openVideo('3szWPaqaZIA')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('3szWPaqaZIA')" class="video-box">
             <img src="https://img.youtube.com/vi/3szWPaqaZIA/maxresdefault.jpg" alt="Space Nomad" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -765,7 +768,7 @@
         </div>
 
         <div class="card" data-type="pc">
-          <div onclick="openVideo('aRLHZcM-7AI')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('aRLHZcM-7AI')" class="video-box">
             <img src="https://img.youtube.com/vi/aRLHZcM-7AI/maxresdefault.jpg" alt="FPS Test" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -776,7 +779,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('W4UQO2fEhbg')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('W4UQO2fEhbg')" class="video-box">
             <img src="https://img.youtube.com/vi/W4UQO2fEhbg/maxresdefault.jpg" alt="Fighter Crowd" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -787,7 +790,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('uMFjRhRh2pw')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('uMFjRhRh2pw')" class="video-box">
             <img src="https://img.youtube.com/vi/uMFjRhRh2pw/maxresdefault.jpg" alt="Bulb Man" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -798,7 +801,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('V5ti62fl0fM')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('V5ti62fl0fM')" class="video-box">
             <img src="https://img.youtube.com/vi/V5ti62fl0fM/maxresdefault.jpg" alt="Tire Monster" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -809,7 +812,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('EKDStDlbUwc')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('EKDStDlbUwc')" class="video-box">
             <img src="https://img.youtube.com/vi/EKDStDlbUwc/maxresdefault.jpg" alt="Gasoline Rush" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -820,7 +823,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('36IVdirDPLE')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('36IVdirDPLE')" class="video-box">
             <img src="https://img.youtube.com/vi/36IVdirDPLE/maxresdefault.jpg" alt="Collecta" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -831,7 +834,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('vETXx7kA-98')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('vETXx7kA-98')" class="video-box">
             <img src="https://img.youtube.com/vi/vETXx7kA-98/maxresdefault.jpg" alt="Eat and Spit" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -842,7 +845,7 @@
         </div>
 	
         <div class="card" data-type="hc">
-          <div onclick="openVideo('A7BmBFbHKA0')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('A7BmBFbHKA0')" class="video-box">
             <img src="https://img.youtube.com/vi/A7BmBFbHKA0/maxresdefault.jpg" alt="Smash the Bodies" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -853,7 +856,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('Fh6eBcmvBGA')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('Fh6eBcmvBGA')" class="video-box">
             <img src="https://img.youtube.com/vi/Fh6eBcmvBGA/maxresdefault.jpg" alt="Barbie Army" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -864,7 +867,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('IXKSB8QBfK0')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('IXKSB8QBfK0')" class="video-box">
             <img src="https://img.youtube.com/vi/IXKSB8QBfK0/maxresdefault.jpg" alt="Visa Shooter" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -875,7 +878,7 @@
         </div>
 
         <div class="card" data-type="hc">
-          <div onclick="openVideo('roYKHa2wD3c')" class="video-box">
+          <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="openVideo('roYKHa2wD3c')" class="video-box">
             <img src="https://img.youtube.com/vi/roYKHa2wD3c/maxresdefault.jpg" alt="Rock Wood And Gold" class="thumbnail">
             <div class="play-button"></div>
           </div>
@@ -901,7 +904,7 @@
 <div id="videoModal" class="video-modal" onclick="closeVideo()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <button class="close-modal" onclick="closeVideo()">&times;</button>
-    <iframe id="modalPlayer" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe id="modalPlayer" src="" title="YouTube video player" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -910,14 +913,14 @@
   const translations = {
     tr: {
       nav_home: "Anasayfa", nav_portfolio: "Projeler", nav_contact: "İletişim",
-      home_title: "Merhaba! ", home_desc: ",
+      home_title: "Merhaba!", home_desc: "",
       home_cta_port: "Projeleri Gör", home_cta_contact: "Bize Ulaş",
       port_title: "Projeler", 
       btn_all: "Hepsi", btn_pc: "PC", btn_mobile: "Mobil",
       desc_all: "",
       desc_pc: "",
       desc_mobile: "",
-	  desc_steelblood: "Steelblood: Allied Front, Medal of Honor ve Half-Life gibi klasiklerden esinlenen, II.Dünya Savaşı’nda geçen eski usül bir birinci şahıs nişancı oyunudur.",
+	  desc_steelblood: "Steelblood: Allied Front, Medal of Honor ve Half-Life gibi klasiklerden esinlenen, II. Dünya Savaşı’nda geçen eski usul bir birinci şahıs nişancı oyunudur.",
       desc_blocktopia: "Tıklayarak kaynak kazandığımız bir şehir yönetimi oyunu.",
       desc_fps: "FPS oyunu mekanik testi.",
       desc_spaceNomad: "Yukarıdan bakışlı (Top-down) bir aksiyon/nişancı oyunu.",
@@ -968,17 +971,14 @@
     currentLang = lang;
     document.querySelectorAll('[data-key]').forEach(el => {
       const key = el.getAttribute('data-key');
-      if (translations[lang][key]) {
+      if (Object.hasOwn(translations[lang], key)) {
         // Preserves internal HTML structures (e.g. <span> nodes) for specific titles
-        if (key === 'home_title') {
-          el.innerHTML = translations[lang][key];
-        } else {
-          el.innerText = translations[lang][key];
-        }
+        el.textContent = translations[lang][key];
       }
     });
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    document.documentElement.lang = lang;
   }
 
   // Switches display state between primary semantic sections
@@ -987,6 +987,7 @@
     document.getElementById(id).classList.add('active');
     document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    document.querySelector('.content-wrapper').scrollTop = 0;
   }
 
   // Links homepage call-to-action buttons directly into the navigation context
@@ -1034,6 +1035,7 @@
     const player = document.getElementById('modalPlayer');
     player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     modal.style.display = 'flex';
+    document.body.classList.add('modal-open');
   }
 
   function closeVideo() {
@@ -1041,6 +1043,7 @@
     const player = document.getElementById('modalPlayer');
     modal.style.display = 'none';
     player.src = '';
+    document.body.classList.remove('modal-open');
   }
 
   window.addEventListener('keydown', function(e) {

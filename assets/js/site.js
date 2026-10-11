@@ -22,10 +22,10 @@
     try { localStorage.setItem('lwg-language', lang); } catch (_) { /* Storage can be unavailable. */ }
 
     const page = body.dataset.page;
-    if (page === 'studio') {
+    if (page === 'home') {
       document.title = lang === 'tr'
-        ? 'Lucky Wise Games | Bağımsız Oyun Stüdyosu'
-        : 'Lucky Wise Games | Independent Game Studio';
+        ? 'Lucky Wise Games | Resmî Web Sitesi'
+        : 'Lucky Wise Games | Official Website';
     } else if (page === 'steelblood') {
       document.title = lang === 'tr'
         ? 'Steelblood: Allied Front | Lucky Wise Games'

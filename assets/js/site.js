@@ -24,12 +24,12 @@
     const page = body.dataset.page;
     if (page === 'studio') {
       document.title = lang === 'tr'
-        ? 'Lucky Wise Games — Bağımsız Oyun Stüdyosu'
-        : 'Lucky Wise Games — Independent Game Studio';
+        ? 'Lucky Wise Games | Bağımsız Oyun Stüdyosu'
+        : 'Lucky Wise Games | Independent Game Studio';
     } else if (page === 'steelblood') {
       document.title = lang === 'tr'
-        ? 'Steelblood: Allied Front — Lucky Wise Games'
-        : 'Steelblood: Allied Front — Lucky Wise Games';
+        ? 'Steelblood: Allied Front | Lucky Wise Games'
+        : 'Steelblood: Allied Front | Lucky Wise Games';
     }
   };
 

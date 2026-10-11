@@ -24,8 +24,8 @@
     const page = body.dataset.page;
     if (page === 'home') {
       document.title = lang === 'tr'
-        ? 'Lucky Wise Games | Resmî Web Sitesi'
-        : 'Lucky Wise Games | Official Website';
+        ? 'Lucky Wise Games | Steelblood: Allied Front'
+        : 'Lucky Wise Games | Steelblood: Allied Front';
     } else if (page === 'steelblood') {
       document.title = lang === 'tr'
         ? 'Steelblood: Allied Front | Lucky Wise Games'

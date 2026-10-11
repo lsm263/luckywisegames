@@ -80,15 +80,6 @@ button { color: inherit; }
   line-height: 1.2;
   text-transform: uppercase;
 }
-.section-number {
-  display: block;
-  margin-bottom: 24px;
-  color: var(--muted);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .18em;
-}
-
 .site-header {
   position: fixed;
   inset: 0 0 auto;
@@ -214,13 +205,11 @@ button { color: inherit; }
 .feature-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(5,6,5,.68)); }
 .feature-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) contrast(1.09); transition: transform .9s var(--ease), filter .6s ease; }
 .feature-media:hover img { transform: scale(1.025); filter: saturate(.9) contrast(1.06); }
-.feature-index { position: absolute; z-index: 1; inset: 20px 20px auto auto; padding: 7px 10px; background: rgba(9,11,10,.68); color: #dce0d9; font-size: .63rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; backdrop-filter: blur(8px); }
 .feature-caption { display: grid; grid-template-columns: 1fr .8fr; gap: 34px; padding-top: 24px; border-top: 1px solid var(--line); }
 .feature-caption h2 { margin: 8px 0 0; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1.1; }
 .feature-caption p { margin: 0; color: var(--muted); font-size: .9rem; }
 .status { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-size: .65rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .status i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(166,178,143,.09); }
-.hero-foot { position: absolute; z-index: 1; right: 0; bottom: 24px; left: 0; display: flex; justify-content: space-between; color: #656b63; font-size: .6rem; font-weight: 800; letter-spacing: .18em; }
 
 .section-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; margin-bottom: 76px; }
 .section-heading h2 { margin: 0 0 16px; font-family: "Arial Narrow", Impact, sans-serif; font-size: clamp(3.5rem, 5.4vw, 5.8rem); letter-spacing: -.04em; line-height: .9; text-transform: uppercase; }
@@ -245,7 +234,6 @@ button { color: inherit; }
 .about-section { position: relative; overflow: hidden; background: var(--paper); color: #111410; }
 .about-section::after { content: "LW"; position: absolute; right: -2vw; bottom: -13vw; color: rgba(13,17,14,.035); font-family: Impact, sans-serif; font-size: 34vw; font-weight: 900; letter-spacing: -.08em; line-height: 1; pointer-events: none; }
 .about-section .eyebrow { color: #647052; }
-.about-section .section-number { color: #777d75; }
 .about-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 10vw, 150px); }
 .about-title h2 { max-width: 650px; margin: 24px 0 0; font-family: "Arial Narrow", Impact, sans-serif; font-size: clamp(4rem, 7vw, 7.5rem); letter-spacing: -.05em; line-height: .86; text-transform: uppercase; }
 .about-copy { padding-top: 68px; }
@@ -306,7 +294,6 @@ button { color: inherit; }
 .steel-video-section { background: #0d0c0a; }
 .steel-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 38px; }
 .steel-heading-row h2, .story-copy h2, .features-heading h2, .gallery-heading h2 { margin: 10px 0 0; font-family: "Arial Narrow", Impact, sans-serif; font-size: clamp(3rem, 5vw, 5.5rem); letter-spacing: -.04em; line-height: .9; text-transform: uppercase; }
-.steel-heading-row > span { color: #6d6b63; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; }
 .trailer-shell { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #050504; }
 .trailer-shell > button { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
 .trailer-shell img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.62) contrast(1.18); transition: transform .8s var(--ease), filter .4s ease; }
@@ -381,7 +368,6 @@ button { color: inherit; }
   .hero-copy h1 { font-size: clamp(4.2rem, 12vw, 7rem); }
   .hero-feature { max-width: 720px; }
   .feature-media { height: auto; min-height: 0; }
-  .hero-foot { display: none; }
   .section-heading { grid-template-columns: 1fr; gap: 36px; margin-bottom: 54px; }
   .section-heading h2 { margin-top: 0; }
   .game-showcase { grid-template-columns: minmax(0, 1fr); }

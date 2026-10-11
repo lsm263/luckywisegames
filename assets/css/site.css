@@ -212,6 +212,7 @@ button { color: inherit; }
 .status i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(166,178,143,.09); }
 
 .section-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; margin-bottom: 76px; }
+.section-heading-single { grid-template-columns: minmax(0, 760px); }
 .section-heading h2 { margin: 0 0 16px; font-family: "Arial Narrow", Impact, sans-serif; font-size: clamp(3.5rem, 5.4vw, 5.8rem); letter-spacing: -.04em; line-height: .9; text-transform: uppercase; }
 .section-heading p { max-width: 620px; margin: 0; color: var(--muted); font-size: 1.05rem; }
 .games-section { background: #0c0e0d; }

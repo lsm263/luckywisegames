@@ -88,28 +88,6 @@
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
-  const dialog = document.querySelector('[data-video-dialog]');
-  const dialogFrame = document.querySelector('[data-dialog-frame]');
-  const openVideo = (videoId) => {
-    if (!dialog || !dialogFrame || !videoId) return;
-    const title = root.lang === 'tr' ? 'YouTube video oynatıcı' : 'YouTube video player';
-    dialogFrame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0" title="${title}" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-    body.classList.add('dialog-open');
-    dialog.showModal();
-  };
-  const closeVideo = () => {
-    if (!dialog || !dialogFrame) return;
-    dialog.close();
-    dialogFrame.replaceChildren();
-    body.classList.remove('dialog-open');
-  };
-  document.querySelectorAll('[data-video]').forEach((button) => {
-    button.addEventListener('click', () => openVideo(button.dataset.video));
-  });
-  document.querySelector('[data-dialog-close]')?.addEventListener('click', closeVideo);
-  dialog?.addEventListener('click', (event) => { if (event.target === dialog) closeVideo(); });
-  dialog?.addEventListener('cancel', (event) => { event.preventDefault(); closeVideo(); });
-
   document.querySelectorAll('[data-video-inline]').forEach((button) => {
     button.addEventListener('click', () => {
       const container = button.closest('[data-inline-container]');
